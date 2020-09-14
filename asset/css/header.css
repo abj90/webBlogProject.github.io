@@ -1,0 +1,35 @@
+/* Header */
+.nav-bar {
+  height: 60px;
+  width: 100%;
+  background-color: #222629;
+  color: #ffffff;
+}
+
+.nav-bar-container {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.25em;
+}
+
+.nav-bar-container a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-bar-container .nav-links a {
+  padding-right: 20px;
+}
+
+.nav-bar-container .media {
+  margin-left: auto;
+}
+
+.nav-bar-container .media .fab {
+  color: #ffffff;
+  font-size: 25px;
+  padding-left: 20px;
+}
+/* Header - end */

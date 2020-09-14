@@ -1,0 +1,217 @@
+@import "./header.css";
+@import "./footer.css";
+@import "./form.css";
+@import "./custonButton.css";
+
+body {
+  color: #7f888f;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2.75em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 90%;
+  max-width: 1100px;
+  height: 100%;
+  margin: auto;
+  grid-gap: 10px;
+  overflow: hidden;
+  align-items: center;
+}
+
+/* Banner section */
+.banner-section {
+  height: 450px;
+  padding: 30px 0px;
+  background-color: #f5f5f5;
+}
+
+.banner-content {
+  grid-column: 1/6;
+}
+
+.banner-content p {
+  text-align: justify;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  grid-column: 7/13;
+}
+
+.img {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Banner section - ends */
+
+/* Cards section */
+.cards-section {
+  grid-column: 1/-1;
+  padding: 1.5em 0em;
+}
+
+.cards-section-title {
+  border-bottom: solid 3px #f56a6a;
+  display: inline-block;
+  margin: 0 0 1em 0;
+  padding: 0 0.75em 0.3em 0;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(450px, auto);
+}
+
+.card:nth-child(n + 4) {
+  border-top: solid 1px rgba(210, 215, 217, 0.75);
+}
+
+.card:nth-of-type(2) {
+  border-left: solid 1px rgba(210, 215, 217, 0.75);
+  border-right: solid 1px rgba(210, 215, 217, 0.75);
+}
+
+.card:nth-of-type(5) {
+  border-left: solid 1px rgba(210, 215, 217, 0.75);
+  border-right: solid 1px rgba(210, 215, 217, 0.75);
+}
+
+.card .inner-card {
+  width: 80%;
+  height: 450px;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.card .inner-card .card-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 0.8em;
+}
+
+.card .inner-card .card-title h3 {
+  margin: 0em;
+}
+
+.card .inner-card .card-content {
+  width: 100%;
+  margin: 0em;
+  padding: 0em;
+  text-align: justify;
+}
+
+.card .inner-card .card-button {
+  width: 50px;
+}
+/* Cards section - end*/
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Banner section */
+  .banner-section {
+    height: 100%;
+    padding: 1.5em 0em;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .banner-content h1 {
+    margin: 0em;
+    font-size: 3em;
+  }
+  /* Banner section end*/
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  /* Banner section */
+  .banner-section {
+    height: 100%;
+    padding: 1.5em 0em;
+  }
+
+  .banner-content {
+    grid-column: 1/-1;
+  }
+
+  .banner-img {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+  }
+
+  .img {
+    width: 90%;
+  }
+
+  .banner-content h1 {
+    margin: 0.5em 0em;
+  }
+  /* Banner section end*/
+
+  /* Cards section */
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    text-align: center;
+  }
+
+  .card:nth-child(-n + 5) {
+    border-bottom: solid 1px rgba(210, 215, 217, 0.75);
+  }
+
+  .card:nth-child(n + 4) {
+    border-top: none;
+  }
+
+  .card:nth-of-type(2) {
+    border-left: none;
+    border-right: none;
+  }
+
+  .card:nth-of-type(5) {
+    border-left: none;
+    border-right: none;
+  }
+}

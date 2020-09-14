@@ -1,0 +1,201 @@
+@import "./header.css";
+@import "./footer.css";
+@import "./custonButton.css";
+@import "./form.css";
+
+body {
+  color: #7f888f;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2.75em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-template-rows: auto;
+  width: 90%;
+  max-width: 1100px;
+  height: 100%;
+  margin: auto;
+  grid-gap: 10px;
+  overflow: hidden;
+  align-items: center;
+}
+
+/* banner section */
+.banner-title {
+  grid-column: 1/-1;
+}
+
+.banner-img {
+  grid-column: 1/-1;
+}
+
+.img {
+  width: 100%;
+}
+/* banner section end*/
+
+/* author-card section */
+.author-card-section .author-card-container {
+  grid-column: 3/11;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-information {
+  height: 120px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-information .avatar-img {
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.author-information .avatar-text h3 {
+  margin: 0px;
+}
+
+.media .fab {
+  color: #222629;
+  font-size: 25px;
+  padding-left: 15px;
+}
+
+.author-card-section .author-card-container .author-bio {
+  height: 100%;
+  width: 100%;
+}
+/* author-card section - end */
+
+/* main-text section */
+.main-text-section .content-wrapper {
+  grid-column: 1/-1;
+  text-align: justify;
+}
+
+.main-text-section .content-wrapper p {
+  margin: 2em 0em;
+}
+/* main-text section - end*/
+
+hr {
+  margin: 2em 0em;
+  border: 0;
+  border-bottom: solid 1px rgba(210, 215, 217, 0.75);
+}
+
+/* secondary-text section */
+.secondary-text-section .content-wrapper {
+  grid-column: 1/-1;
+  text-align: justify;
+  margin: 1em 0m;
+}
+/* secondary-text section - end */
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* author-card section */
+  .author-card-section .author-card-container {
+    grid-column: 1/-1;
+  }
+
+  .author-information {
+    width: 60%;
+    justify-content: flex-start;
+  }
+
+  .author-information .avatar-text {
+    margin-left: 20px;
+  }
+
+  /* author-card section - end*/
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  /* banner section */
+  .banner-title {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+
+  .banner-title h2 {
+    margin: 0px;
+  }
+
+  .banner-img {
+    grid-row: 1/2;
+  }
+  /* banner section end*/
+
+  /* author-card section */
+  .author-card-container {
+    grid-column: 1/-1;
+  }
+
+  .author-information {
+    height: 120px;
+    width: 68%;
+  }
+
+  .avatar-img {
+    width: 30px;
+    height: 80px;
+  }
+
+  .avatar-text {
+    padding-left: 10px;
+  }
+
+  .avatar-text h3 {
+    margin: 0px;
+    font-size: 0.9em;
+  }
+
+  .media .fab {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  /* author-card section - end */
+}
