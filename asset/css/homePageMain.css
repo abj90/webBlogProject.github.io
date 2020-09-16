@@ -77,7 +77,11 @@ h3 {
 /* Banner section - ends */
 
 /* Cards section */
-.cards-section {
+.card-section {
+  padding: 5px 0px;
+}
+
+.cards-wrapper {
   grid-column: 1/-1;
   padding: 1.5em 0em;
 }
